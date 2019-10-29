@@ -4,15 +4,16 @@ import { HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {RouterModule, Routes} from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppRoutingModule } from '../../modules/app/app-routing.module';
+import { AppComponent } from './components/app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent } from '../user/profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 
-import {AuthenticationService} from './authentication.service';
-import {AuthGuardService} from './auth-guard.service';
+import {AuthenticationService} from '../../services/authentication.service';
+import {AuthGuardService} from '../../services/auth-guard.service';
+import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
   {path: '',component: HomeComponent},
@@ -28,7 +29,8 @@ const routes: Routes = [
     HomeComponent,
     LoginComponent,
     ProfileComponent,
-    RegisterComponent
+    RegisterComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
