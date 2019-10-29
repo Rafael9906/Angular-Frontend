@@ -1,37 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
-        <button class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbar1"
-          aria-controls="navbar1"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-
-
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-md-center" id="navbar1">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a routerLink="/" class="nav-link">Home</a>
-            </li>
-            <li *ngIf="!auth.isLoggedIn()" class="nav-item">
-              <a routerLink="/login" class="nav-link">Login</a>
-            </li>
-            <li *ngIf="!auth.isLoggedIn()" class="nav-item">
-                <a routerLink="/register" class="nav-link">Register</a>
-              </li>
-              <li *ngIf="auth.isLoggedIn()" class="nav-item">
-                  <a routerLink="/profile" class="nav-link">Profile</a>
-                </li>
-                <li *ngIf="auth.isLoggedIn()" class="nav-item">
-                    <a routerLink="" (click)="auth.logout()" class="nav-link">Logout</a>
-                  </li>
-          </ul>
-
-        </div>
-
-      </nav>
-
-      <router-outlet></router-outlet>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+    <h5 class="my-0 mr-md-auto font-weight-normal">ChibchaWeb</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <a class="p-2 text-dark" href="#">Features</a>
+      <a class="p-2 text-dark" href="#">Enterprise</a>
+      <a class="p-2 text-dark" href="#">Support</a>
+      <a class="p-2 text-dark" href="#">Pricing</a>
+    </nav>
+    <a class="btn btn-outline-primary" href="#">Sign up</a>
+  </div>

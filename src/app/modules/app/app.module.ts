@@ -14,6 +14,7 @@ import { RegisterComponent } from './register/register.component';
 import {AuthenticationService} from '../../services/authentication.service';
 import {AuthGuardService} from '../../services/auth-guard.service';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   {path: '',component: HomeComponent},
@@ -31,6 +32,7 @@ const routes: Routes = [
     ProfileComponent,
     RegisterComponent,
     HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
