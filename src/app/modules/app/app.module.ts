@@ -15,12 +15,16 @@ import {AuthenticationService} from '../../services/authentication.service';
 import {AuthGuardService} from '../../services/auth-guard.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HeaderLineComponent } from './header-line/header-line.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   {path: '',component: HomeComponent},
   {path: 'login',component: LoginComponent},
   {path: 'register',component: RegisterComponent},
   {path: 'profile',component: ProfileComponent, canActivate: [AuthGuardService]},
+  {path: 'contact',component: ContactComponent},
+
 
 ]
 
@@ -33,6 +37,8 @@ const routes: Routes = [
     RegisterComponent,
     HeaderComponent,
     FooterComponent,
+    HeaderLineComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
